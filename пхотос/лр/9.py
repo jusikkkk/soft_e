@@ -4,5 +4,5 @@ for i in range(10):
         if i != j:
             value += j
         else:
-            value += i
+            value += 2*i
 print(value)
