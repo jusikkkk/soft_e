@@ -6,4 +6,4 @@ for i in string:
         print(f"Буква '{value}' есть в строке под {index} индексом")
         break
 else:
-    зкште(f"Буквы '{value}' нет в указанной строке")
+    print(f"Буквы '{value}' нет в указанной строке")
