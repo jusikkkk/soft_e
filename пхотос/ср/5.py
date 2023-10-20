@@ -9,9 +9,3 @@ while 'world' not in string:
     if counter < 10:
         string = memory
     counter += 1
-
-
-
-
-
-
