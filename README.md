@@ -137,7 +137,7 @@ if __name__ == '__main__':
 
 ## Лабораторная работа №7
 - Текст задания
-## код основной программы
+## код основной программы:
 ```python
 from for_import7 import importnaya
 
@@ -328,14 +328,14 @@ if __name__ == '__main__':
   
 ## Самостоятельная работа №5
 - Текст задания
-## код импортируемой программы
+## код импортируемой программы:
 ```python
 def triangle_area(a, b, c):
     p = (a + b + c) / 2
     area = (p*(p-a)*(p-b)*(p-c))**(1/2)
     return area
 ```
-## код основной программы
+## код основной программы:
 ```python
 from heron import triangle_area
 print(triangle_area(int(input("Ведите длину строны a: ")),
