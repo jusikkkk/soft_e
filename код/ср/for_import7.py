@@ -1,0 +1,2 @@
+def importnaya():
+    print("уъу")
