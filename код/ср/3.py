@@ -13,7 +13,3 @@ def slowarik(str):
 
 print(slowarik("88881232833344611"))
 print(slowarik("13912"))
-
-
-
-
