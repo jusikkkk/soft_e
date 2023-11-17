@@ -1,3 +1,3 @@
 f = open('лаба.txt', 'r')
-print(f.readline())
+print(f.readlines())
 f.close()
