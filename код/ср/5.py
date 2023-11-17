@@ -14,10 +14,3 @@ for line in lines:
 print("Студенты с средним баллом выше", min_avg_grade, ":")
 for student in students:
     print(", ".join(map(str, student)))
-
-
-
-
-
-
-
