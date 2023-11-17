@@ -12,7 +12,3 @@ with open('input.txt','r') as f:
             letters = list(words)
             c_letters += len(letters)
     print(f"Input file contains:\n{c_letters-7} letters\n{c_words} words\n{c_lines} lines")
-
-
-
-
