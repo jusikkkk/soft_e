@@ -4,8 +4,9 @@ class Book:
         self.author = author
         self.year = year
 
+    def title(self):
+        print(f"Название книги: {self.name}\nАвтор: {self.author}\nГод публикации: {self.year}")
+
 
 first_book = Book('Стрелок', 'Стивен Кинг', 1982)
-print(first_book.name)
-print(first_book.author)
-print(first_book.year)
+first_book.title()
