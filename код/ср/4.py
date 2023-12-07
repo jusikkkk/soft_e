@@ -1,16 +1,26 @@
-class NegativeValueException(Exception):
-    pass
+from memory_profiler import memory_usage
 
+def amount_of_memory_usage(func):
+    def wrapper(*args, **kwargs):
+        # измеряем количество памяти до выполнения функции
+        memory_before = memory_usage()[0]
+        # вызываем функцию
+        result = func(*args, **kwargs)
+        # измеряем количество памяти после выполнения функции
+        memory_after = memory_usage()[0]
+        amount = (memory_after-memory_before)*1024
+        print(f"Функция {func.__name__} занимает {amount} байт памяти")
+        return result
+    return wrapper
 
-def check_name(name):
-    if len(name) > 10:
-        raise NegativeValueException('Длина более 10 символов')
-    else:
-        print('Успешная регистрация')
+@amount_of_memory_usage
+def addition(a,b):
+    print(a**b)
 
+@amount_of_memory_usage
+def my_list():
+    listik = [i for i in range(1, 1000)]
+    print(listik)
 
-if __name__ == '__main__':
-    name1 = 'жуля'
-    name2 = 'fghjkljhgfdds'
-    check_name(name1)
-    check_name(name2)
+addition(3, 5)
+my_list()

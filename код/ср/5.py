@@ -1,19 +1,34 @@
-class SiteChecker:
-    def __init__(self, func):
-        print('> Класс SiteChecker метод __init__ успешный запуск')
-        self.func = func
+class MyException(Exception):
+    pass
 
-    def __call__(self):
-        print('> Проверка перед запуском', self.func.__name__)
-        self.func()
-        print('>Проверка безопасного выключения')
+def divide(a, b): 
+    if b == 0:
+        raise MyException("На ноль делить нельзя!")
+    return a / b
 
-@SiteChecker
-def site():
-    print('Усердная работа сайта')
+try:
+    result = divide(10, 0)
+except MyException as e:
+    print(e)
+else:
+    print(result)
 
+def call_centre(phone_number):
+    if len(phone_number) != 11:
+        raise MyException("Номер введен некорректно!")
+    else:
+        print(f"Вы звоните на номер {phone_number}")
 
-if __name__ == '__main__':
-    print('>>Сайт запущен')
-    site()
-    print('>> Сайт выключен')
+try:
+    pn = call_centre("898274661992")
+except MyException as e:
+    print(e)
+else:
+    pn
+
+try:
+    pn = call_centre("89193756122")
+except MyException as e:
+    print(e)
+else:
+    pn

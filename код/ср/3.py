@@ -1,16 +1,9 @@
-def data(*args):
+def addition(num):
     try:
-        for i in range(len(*args)):
-            try:
-                result = (args[0][i] * 15) // 10
-                print(result)
-            except Exception as ex:
-                print(ex)
-    except Exception as ex:
-        print(ex)
-    finally:
-        print('Вся информация обработана')
+        if num is float or int:
+            print(2+num)
+    except TypeError:
+        print("Введён неверный тип данных")
 
-
-if __name__ == '__main__':
-    data([1, 15, 'Hello', 'i', 'try', 'to', 'crash', 'your', 'site', 56, 60])
+addition(6)
+addition("шесть")
